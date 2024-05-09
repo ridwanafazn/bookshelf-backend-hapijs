@@ -4,38 +4,39 @@ import {
   getBookByIdHandler,
   editBookByIdHandler,
   deleteBookByIdHandler,
-} from "./handler.js";
+  // eslint-disable-next-line import/extensions
+} from './handler.js';
 
 const routes = [
   {
-    method: "POST",
-    path: "/books",
+    method: 'POST',
+    path: '/books',
     handler: addBookHandler,
   },
   {
-    method: "GET",
-    path: "/books",
+    method: 'GET',
+    path: '/books',
     handler: getAllBooksHandler,
   },
   {
-    method: "GET",
-    path: "/books/{bookId}",
+    method: 'GET',
+    path: '/books/{bookId}',
     handler: getBookByIdHandler,
   },
   {
-    method: "PUT",
-    path: "/books/{bookId}",
+    method: 'PUT',
+    path: '/books/{bookId}',
     handler: editBookByIdHandler,
   },
   {
-    method: "DELETE",
-    path: "/books/{bookId}",
+    method: 'DELETE',
+    path: '/books/{bookId}',
     handler: deleteBookByIdHandler,
   },
   {
-    method: "*",
-    path: "/{any*}",
-    handler: () => "Halaman tidak ditemukan",
+    method: '*',
+    path: '/{any*}',
+    handler: () => 'Halaman tidak ditemukan',
   },
 ];
 
